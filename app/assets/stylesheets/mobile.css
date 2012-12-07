@@ -1,0 +1,42 @@
+/**** Stylesheet for mobile version ****/
+
+body {
+	margin:0;
+	background-image:url('Background.png');
+}
+.notice {
+	background: green;
+	color: white;
+	border: 1px dotted lightGreen;
+	padding: 2px 20px;
+	font-size: 16px;
+	line-height: 12px;
+	margin-bottom:20px;
+}
+.container {
+	padding:10px;
+	margin-left:auto;
+	margin-right:auto;
+	min-height:356px;
+	width:80%;
+	min-width:320px;
+	background:#FFF;
+	border-radius: 7px; 
+	-moz-border-radius: 7px; 
+	-webkit-border-radius: 7px; 
+	border: 1px solid #DDD;
+}
+.url_form_container{
+	margin:100px auto 0 auto;
+	width:90%;
+	min-width:300px;
+	border:1px solid orange;
+}
+.url_form {
+	height:26px;
+	width:75%;
+	font-size:16pt;
+}
+.url_form:focus {
+	outline:none;
+}

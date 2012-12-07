@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shortener</title
+    <%= csrf_meta_tag %>
+    <%= javascript_include_tag "application"%>
+    <%= javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js" %>
+    <% unless mobile? %>
+      <%= stylesheet_link_tag "master" %>
+    <% else %>
+      <%= stylesheet_link_tag "mobile" %>
+      <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <% end %>
+  </head>
+  <body>
+    <%= link_to "New", root_path %>
+    <%= link_to "All", urls_path %>
+
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-#{ name == :notice ? "success" : "error" }"></div>
+      <%= msg %>
+    <% end %> 
+
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
+  
+
+

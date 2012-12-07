@@ -1,0 +1,14 @@
+<div class="url_form_container">
+  <%= form_for @url do |f| %>
+    <% if @url.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@url.errors.count, "error")%> prohibited this url from being saved:"</h2>
+        <% @url.errors.full_messages.each do |msg| %>
+          <%= msg %>
+        <% end %>
+      </div>
+    <% end %>
+    <%= f.text_field :url, :as =>"string", :placeholder =>"http://", :class =>"url_form" %>
+    <%= f.submit 'Shorten' %>
+  <% end %>
+</div>

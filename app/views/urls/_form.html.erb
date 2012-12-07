@@ -1,0 +1,9 @@
+<%= form_for @url, :html => { :class => 'form-horizontal' } do |f| %>
+	<%= controller.action_name.capitalize + ' ' + controller.controller_name.capitalize.singularize %>
+	<%= f.text_field :url, :as => "string", :placeholder => "Full url starting with http://", :label => 'URL to shorten'%>
+	<%= f.text_field :shorturl, :as => "string", :placeholder => 'shrtUrl', :label => 'Short URL'%>
+	<%= f.text_field :date_created, :as => 'date', :class => 'datetime_select', :label => 'Date Created'%>
+	<%= f.text_field :clicks, :as => "integer", :class => 'number_field', :label => 'Number of Clicks'%>
+	<%= f.submit :class => 'btn btn-primary'%>
+	<%= link_to "Cancel", urls_path, :class => 'btn btn-danger'%>
+<% end %>
