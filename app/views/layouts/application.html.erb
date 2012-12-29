@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shortener</title
+    <title>Tril.la</title
     <%= csrf_meta_tag %>
     <%= javascript_include_tag "application"%>
     <%= javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js" %>
@@ -14,7 +14,6 @@
   </head>
   <body>
     <%= link_to "New", root_path %>
-    <%= link_to "All", urls_path %>
 
     <% flash.each do |name, msg| %>
       <div class="alert alert-#{ name == :notice ? "success" : "error" }"></div>

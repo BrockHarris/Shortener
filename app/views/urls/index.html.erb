@@ -9,7 +9,7 @@
         <%= t("activerecord.attributes.url.url", :default => t("activerecord.labels.url", :default => "Full Url")) %>
       </th>
       <th>Created at</th>
-      <th>Actions</th>
+      <!--th>Actions</th-->
     </tr>
   </thead>
   <tbody>
@@ -19,14 +19,12 @@
         <td><%=link_to root_url.gsub("http://", '') + url.shorturl, root_url + url.shorturl %></td>
         <td><%= link_to truncate(url.url.gsub("http://", ''), :length => 70), url_path(url) %></td>
         <td><%=url.created_at %></td>
-        <td>
-          <%= link_to "Show", url_path(url), :class => 'btn btn-mini'%>
-          <%= link_to "Edit", edit_url_path(url), :class => 'btn btn-mini'%>
-          <%= link_to "Destroy", url_path(url), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
-        </td>
+        <!--td>
+          <%# link_to "Show", url_path(url), :class => 'btn btn-mini'%>
+          <%# link_to "Edit", edit_url_path(url), :class => 'btn btn-mini'%>
+          <%# link_to "Destroy", url_path(url), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+        </td-->
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to "New", new_url_path, :class => 'btn btn-primary' %>

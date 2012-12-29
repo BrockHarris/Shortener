@@ -28,8 +28,8 @@ body {
 }
 .url_form_container{
 	margin:100px auto 0 auto;
-	width:90%;
-	min-width:300px;
+	width:80%;
+	min-width:270px;
 	border:1px solid orange;
 }
 .url_form {

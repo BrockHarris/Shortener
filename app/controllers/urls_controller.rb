@@ -1,6 +1,7 @@
 class UrlsController < ApplicationController
+http_basic_authenticate_with :name => "admin", :password => "123456789", :except => [:show, :new, :create, :goto]
 
-def index
+  def index
     @urls = Url.all
     respond_to do |format|
       format.html
